@@ -40,6 +40,14 @@ gem 'spring',        group: :development
 
 gem 'bundler'
 
+# APIs
+gem 'twitter'
+gem 'github_api'
+gem 'gems'
+gem 'prawn'
+gem 'prawnto'
+gem 'prawn-table'
+
 group :development do
   gem 'pry-rails'
   gem 'better_errors'

@@ -1,0 +1,64 @@
+<% if !@user_name.blank? %>
+	<h3>Records of '<%= "#{@user_name}".capitalize %>'</h4>
+	<br>
+
+	<h4><u>Twitter Records</u></h4>
+
+	<table>
+	<% count = 0 %>
+	<% unless @tweets.nil? %>
+		<% @tweets[0..9].each do |tweet| %>
+			<tr>
+				<td><%= count += 1 %>.
+				<td><%= tweet.text %></td>
+			</tr>
+		<% end %>
+	<% else %>
+		<strong><%= "Oooooh...No records found" %></strong>
+	<% end %>
+	</table>
+
+
+	<br>
+	<h4><u>Github Records</u></h4>
+
+	<table>
+	<% count = 0 %>
+	<% unless @git_repos.nil? %>
+		<% @git_repos.each do |gitrepo| %>
+			<tr>
+				<td><%= count += 1 %>.
+				<td><%= gitrepo.name %></td>
+			</tr>
+		<% end %>
+	<% else %>
+		<strong><%= "Mehhh...No records found" %></strong>
+	<% end %>
+	</table>
+
+	<br>
+	<h4><u>Rubygems Records</u></h4>
+
+	<table>
+	<% count = 0 %>
+	<% unless @rubygems.nil? %>
+		<% @rubygems.each do |rubygem| %>
+			<tr>
+				<td><%= count += 1 %>.
+				<td><%= rubygem["name"] %></td>
+			</tr>
+		<% end %>
+	<% else %>
+		<strong><%= "Whooo...No records found" %></strong>
+	<% end %>
+	</table>
+
+<% if !@tweets.nil? || !@git_repos.nil? || !@rubygems.nil? %>
+	<br>
+	&emsp;<%= link_to 'Download PDF', websites_display_path(:pdf, :user_name => "#{@user_name}"), class: "btn btn-primary"%>
+	<br><br>
+<% end %>
+
+<% else %>
+	<strong><%= "Oops...No user found!" %></strong>
+<% end %>

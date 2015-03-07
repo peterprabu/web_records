@@ -47,6 +47,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.7)
     arel (5.0.1.20140414130214)
     autoprefixer-rails (5.1.7)
       execjs
@@ -60,6 +61,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass-extras (0.0.6)
       rails (>= 3.1.0)
+    buftok (0.2.0)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -89,10 +91,13 @@ GEM
       rails (>= 3, < 5)
     database_cleaner (1.4.0)
     debug_inspector (0.0.2)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
     dotenv (2.0.0)
     dotenv-rails (2.0.0)
       dotenv (= 2.0.0)
+    equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.4.0)
     factory_girl (4.5.0)
@@ -102,10 +107,22 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    gems (0.8.3)
     gherkin (2.12.2)
       multi_json (~> 1.3)
+    github_api (0.12.3)
+      addressable (~> 2.3)
+      descendants_tracker (~> 0.0.4)
+      faraday (~> 0.8, < 0.10)
+      hashie (>= 3.3)
+      multi_json (>= 1.7.5, < 2.0)
+      nokogiri (~> 1.6.3)
+      oauth2
     hashie (3.4.0)
     hike (1.2.3)
+    http (0.6.3)
+      http_parser.rb (~> 0.6.0)
+    http_parser.rb (0.6.0)
     i18n (0.7.0)
     jbuilder (2.2.9)
       activesupport (>= 3.0.0, < 5)
@@ -118,6 +135,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.2)
@@ -126,6 +145,7 @@ GEM
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    naught (1.0.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     oauth2 (1.0.0)
@@ -145,7 +165,15 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
+    pdf-core (0.5.0)
     polyglot (0.3.5)
+    prawn (2.0.0)
+      pdf-core (~> 0.5.0)
+      ttfunk (~> 1.4.0)
+    prawn-table (0.2.1)
+    prawnto (0.1.1)
+      prawn
+      rails (>= 2.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -208,6 +236,7 @@ GEM
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    simple_oauth (0.3.1)
     slop (3.6.0)
     spring (1.3.3)
     sprockets (2.12.3)
@@ -462,8 +491,20 @@ GEM
       polyglot (>= 0.3.1)
       polyglot (>= 0.3.1)
       polyglot (>= 0.3.1)
+    ttfunk (1.4.0)
     turbolinks (2.5.3)
       coffee-rails
+    twitter (5.14.0)
+      addressable (~> 2.3)
+      buftok (~> 0.2.0)
+      equalizer (~> 0.0.9)
+      faraday (~> 0.9.0)
+      http (~> 0.6.0)
+      http_parser.rb (~> 0.6.0)
+      json (~> 1.8)
+      memoizable (~> 0.4.0)
+      naught (~> 1.0)
+      simple_oauth (~> 0.3.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     tzinfo-data (1.2015.1)
@@ -493,10 +534,15 @@ DEPENDENCIES
   devise!
   dotenv-rails
   factory_girl_rails
+  gems
+  github_api
   jbuilder (~> 2.0)
   jquery-rails
   omniauth
   omniauth-facebook
+  prawn
+  prawn-table
+  prawnto
   pry-rails
   rails (= 4.1.4)
   rails_config
@@ -508,6 +554,7 @@ DEPENDENCIES
   spring
   sqlite3
   turbolinks
+  twitter
   tzinfo-data
   uglifier (>= 1.3.0)
   validates_formatting_of

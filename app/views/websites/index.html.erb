@@ -1,2 +1,10 @@
-<h1>Websites#index</h1>
-<p>Find me in app/views/websites/index.html.erb</p>
+<h4>Welcome!</h4>
+<br>
+
+<div class="form-inputs">
+<%= simple_form_for :website, :url => '/websites/display' do |f| %>
+  	&emsp;<%= f.text_field :user_name, size: 50, :placeholder => "User name goes here..." %>
+  	<%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+</div>
+
