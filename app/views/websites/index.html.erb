@@ -1,10 +1,10 @@
 <h4>Welcome!</h4>
 <br>
 
-<div class="form-inputs">
-<%= simple_form_for :website, :url => '/websites/display' do |f| %>
-  	&emsp;<%= f.text_field :user_name, size: 50, :placeholder => "User name goes here..." %>
-  	<%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
+<div>
+  <%= form_tag("/websites/display", method: "get") do %>
+  <%= label_tag(:user_name, "Search for ") %>
+  <%= text_field_tag(:user_name, nil, :size=> 50, :placeholder => "User name goes here...") %>
+  <%= submit_tag("Search", class: "btn btn-primary") %>
+  <% end %>
 </div>
-

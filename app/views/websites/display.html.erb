@@ -9,8 +9,8 @@
 	<% unless @tweets.nil? %>
 		<% @tweets[0..9].each do |tweet| %>
 			<tr>
-				<td><%= count += 1 %>.
-				<td><%= tweet.text %></td>
+			  <td><%= count += 1 %>.
+			  <td><%= tweet.text %></td>
 			</tr>
 		<% end %>
 	<% else %>
@@ -27,8 +27,8 @@
 	<% unless @git_repos.nil? %>
 		<% @git_repos.each do |gitrepo| %>
 			<tr>
-				<td><%= count += 1 %>.
-				<td><%= gitrepo.name %></td>
+			  <td><%= count += 1 %>.
+			  <td><%= gitrepo.name %></td>
 			</tr>
 		<% end %>
 	<% else %>
@@ -44,8 +44,8 @@
 	<% unless @rubygems.nil? %>
 		<% @rubygems.each do |rubygem| %>
 			<tr>
-				<td><%= count += 1 %>.
-				<td><%= rubygem["name"] %></td>
+			  <td><%= count += 1 %>.
+			  <td><%= rubygem["name"] %></td>
 			</tr>
 		<% end %>
 	<% else %>
