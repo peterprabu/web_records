@@ -30,7 +30,7 @@ class Pdf
   		    text "#{c+=1}. #{g.name}"
   		  end
   		else
-  		  text "No records found..."
+  		  
   		end
 
   		move_down(25)
