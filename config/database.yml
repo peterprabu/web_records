@@ -24,4 +24,4 @@ production:
   adapter: postgresql
   database: web_records_production
   pool: 5
-  timeout: 5000
+  timeout: 5000  
