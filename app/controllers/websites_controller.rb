@@ -20,7 +20,7 @@ class WebsitesController < ApplicationController
 	    format.html
 	    format.pdf do
 		    pdf = Prawn::Document.new
-		    send_data Pdf.generate_pdf(@user_name, @tweets, @git_repos, @rubygems), filename: 'report.pdf', type: 'application/pdf'
+		    send_data Pdf.generate_pdf(@user_name, @tweets, @git_repos, @rubygems), filename: 'web_records.pdf', type: 'application/pdf'
 	    end
   	end
   end
