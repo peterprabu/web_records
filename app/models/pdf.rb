@@ -12,7 +12,7 @@ class Pdf
 
   		c = 0
   		if !tweets.blank?
-  		  tweets = tweets.map do |t|
+  		  tweets = tweets[0..9].map do |t|
   		    t_table = make_table([["#{t.text}"]], :column_widths => [500])
   		    t_table.draw
   		  end
