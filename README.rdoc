@@ -1,28 +1,48 @@
-== README
+== Website Records
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an an application in Ruby on Rails which fetches details from the following websites for the username:
 
-Things you may want to cover:
+* Twitter- last 10 tweets.
 
-* Ruby version
+* Github - Names of repositories.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* RubyGems- Names of all gems published.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+System dependencies:
+
+* ruby 2.0.0p481
+
+* Rails 4.1.4
+
+* Mac OS
+
+* Github
+
+* Heroku
+
+
+Installation:
+
+1. <tt>bundle install</tt>
+
+2. <tt>rake db:migrate</tt>
+
+3. <tt>rake db:seed</tt>. If needed.
+
+4. <tt>rails s</tt>
+
+
+To run RSpec test:
+
+<tt>cd project_path</tt>
+
+<tt>rspec spec/</tt>
+
+
+Services:
+
+Twitter API, GitHub API and Gems API
+
+
+Application developed by Peter.
