@@ -4,7 +4,7 @@
 <div>
   <%= form_tag("/websites/display", method: "get") do %>
   <%= label_tag(:user_name, "Search for ") %>
-  <%= text_field_tag(:user_name, nil, :size=> 50, :placeholder => "User name goes here...") %>
+  <%= text_field_tag(:user_name, nil, :size=> 50, :placeholder => "User name goes here....") %>
   <%= submit_tag("Submit", class: "btn btn-primary") %>
   <% end %>
 </div>
