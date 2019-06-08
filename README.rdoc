@@ -1,6 +1,6 @@
 == Website Records
 
-This is an an application in Ruby on Rails which fetches details from the following websites for the username:
+This is an application in Ruby on Rails which fetches details from the following websites for the username:
 
 * Twitter- last 10 tweets.
 
